@@ -1,0 +1,15 @@
+__pycache__/
+
+*.egg-info
+
+.env
+uv.lock
+.idea/**
+lightning_logs/**
+.pytest_cache
+.ruff_cache
+
+.coverage
+
+models
+workspace
