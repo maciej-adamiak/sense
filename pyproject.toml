@@ -1,0 +1,39 @@
+[project]
+name = "sense"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "torch",
+    "torchaudio",
+    "numpy",
+    "onnx",
+    "onnxruntime",
+    "onnxsim",
+    "soundfile",
+    "resampy",
+    "torch-audioset",
+    "jsonargparse>=4.49.0",
+    "semver>=3.0.4",
+    "tqdm>=4.67.3",
+    "requests>=2.34.2",
+    "pandas>=3.0.3",
+    "torchcodec>=0.13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=4.2.0",
+    "pylint>=3.3.6",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.1.1",
+    "pytest-mock>=3.15.0",
+    "pytest-xdist>=3.6.1",
+    "ruff>=0.11.6",
+]
+
+[tool.setuptools]
+py-modules = ['sense']
+
+[tool.uv.sources]
+torch-audioset = { git = "https://github.com/w-hc/torch_audioset" }
