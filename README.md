@@ -53,13 +53,21 @@ model_deploy.py \
   --model yamnet.cvimodel
 ```
 
+## DEVICE
+
+```bash
+mkdir -p /mnt/tpu && cd /mnt/tpu
+```
+
+## HOST
+
 ```bash
 cd /workspace
 git clone https://github.com/milkv-duo/tpu-sdk-sg200x.git
 mv ./tpu-sdk-sg200x ./tpu-sdk
-```
 
-## Host
+scp -r /workspace/tpu-sdk root@192.168.42.1:/mnt/tpu/
+```
 
 ```bash
 curl -L -o /tmp/yamnet_class_map.csv \
@@ -76,7 +84,7 @@ scp device/{run_yamnet.sh,run_yamnet.py} \
 ssh root@192.168.42.1 'chmod +x /root/yamnet/run_yamnet.sh'
 ```
 
-## Device
+## DEVICE
 
 ```bash
 ./run_yamnet.sh sample_0000.npz
