@@ -1,3 +1,7 @@
+# Baking Audio Intelligence into a MilkV Board - The YAMNet Duo S Recipe
+
+![](device.jpg)
+
 ## HOST
 
 ```bash
